@@ -29,6 +29,7 @@
     ((2 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem
   );
 }
+
 a {
   font-weight: 500;
   color: #646cff;
