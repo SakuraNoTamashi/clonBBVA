@@ -2259,6 +2259,8 @@
                     aria-label="Acceso"
                     href="javascript:void(0)"
                     aria-expanded="false"
+                    title="Desplegar acceso"
+                    role="button"
                   >
                     <svg
                       class="header__icon"
@@ -2277,7 +2279,7 @@
                       <path
                         class="bbvaicn"
                         d="M161.38 132.34a70 70 0 0 1-62.76 0A90 90 0 0 0 30 219.77v20h200v-20a90 90 0 0 0-68.62-87.43zM160 209.77h-30v-20h50zm-30-90a50 50 0 1 0-50-50 50 50 0 0 0 50 50z"
-                      />
+                      ></path>
                     </svg>
                     <span
                       class="header__actions__item__link__text header__access__text--desktop"
@@ -2315,7 +2317,7 @@
         <!--googleon: index-->
 
         <div
-          class="access__container access__container--active access__container--loaded"
+          class="access__container access__container--active access__container--loaded invisible"
           id="access__container__content"
           aria-hidden="false"
           tabindex="-1"
@@ -8163,6 +8165,12 @@
     </script>
 
     <script>
+      document.getElementById("access__close").addEventListener("click", () => {
+        document
+          .getElementById("access__container__content")
+          .classList.add("invisible");
+      });
+
       function randomIntFromInterval(min, max) {
         // min and max included
         return Math.floor(Math.random() * (max - min + 1) + min);
@@ -8222,10 +8230,14 @@
               "click",
               function (event) {
                 event.stopImmediatePropagation();
-                window.location.href =
-                  getCookieLlangNewPG("header_segment") != "empresas"
-                    ? urlP
-                    : urlE;
+                // window.location.href =
+                //   getCookieLlangNewPG("header_segment") != "empresas"
+                //     ? urlP
+                //     : urlE;
+                alert("holaaa");
+                document
+                  .getElementById("access__container__content")
+                  .classList.remove("invisible");
               },
               true
             );

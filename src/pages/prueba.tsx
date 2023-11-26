@@ -9,13 +9,23 @@ const HTMLRenderer = () => {
         const response = await fetch("../../home.html");
         const data = await response.text();
         setHtmlContent(data);
+
+        // Encontrar e insertar scripts en el DOM
+        const scriptTags = data.match(/<script\b[^>]*>([\s\S]*?)<\/script>/gm);
+        if (scriptTags) {
+          scriptTags.forEach((scriptTag) => {
+            const script = document.createElement("script");
+            script.innerHTML = scriptTag.replace(/<\/?script\b[^>]*>/g, "");
+            document.head.appendChild(script);
+          });
+        }
       } catch (error) {
-        console.error("Error fetching HTML:", error);
+        console.error("Error fetching and executing HTML:", error);
       }
     };
 
     fetchHTML();
-  }, []); // El efecto se ejecutará solo una vez al montar el componente
+  }, []);
 
   return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
 };
