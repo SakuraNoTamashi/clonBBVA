@@ -21,7 +21,14 @@
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
-
+.title {
+  font-size: var(--typographyTypeSmall, 0.9375rem);
+  font-weight: var(--fontFacePrimaryMediumFontWeight, 500);
+  line-height: var(--lineHeightTypeSmall, 1.5rem);
+  margin: calc(
+    ((2 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem
+  );
+}
 a {
   font-weight: 500;
   color: #646cff;
