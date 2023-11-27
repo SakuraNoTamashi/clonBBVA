@@ -9,7 +9,8 @@ export default {
       colors: {
         navyBlue: '#072146',
         blue2: '#192645',
-        lightDarkBlue:'#004481'
+        lightDarkBlue: '#004481',
+        appBarHighlighted:'#043263'
       }
     },
   },

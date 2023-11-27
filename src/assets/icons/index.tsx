@@ -103,7 +103,7 @@ const CollectionsIcon = () => {
     </svg>
   );
 };
-const FundingIcon = () => { 
+const FundingIcon = () => {
   return (
     <svg
       viewBox="0 0 260 260"
@@ -123,8 +123,8 @@ const FundingIcon = () => {
       <path d="M21.7 120a98.32 98.32 0 0 1 196.4-6.8 86 86 0 0 1 21.9 9.7V120a120 120 0 1 0-120 120h2.9a84.51 84.51 0 0 1-9.7-21.9A98.36 98.36 0 0 1 21.7 120Z"></path>
     </svg>
   );
-}
-const TPVsIcon = () => { 
+};
+const TPVsIcon = () => {
   return (
     <svg
       viewBox="0 0 260 260"
@@ -143,8 +143,8 @@ const TPVsIcon = () => {
       <path d="M180 220v-20H80v20H70a10 10 0 0 1-10-10V30a10 10 0 0 1 10-10h120a10 10 0 0 1 10 10v180a10 10 0 0 1-10 10Zm-20-60v20h20v-20Zm-40 0v20h20v-20Zm-40 0v20h20v-20Zm80-40v20h20v-20Zm-40 0v20h20v-20Zm-40 0v20h20v-20Zm80-40v20h20V80Zm-40 0v20h20V80Zm-40 0v20h20V80Zm0-40v20h80l20-20Zm10 170h80v20a10 10 0 0 1-10 10h-60a10 10 0 0 1-10-10Z"></path>
     </svg>
   );
-}
-const GuaranteesIcon = () => { 
+};
+const GuaranteesIcon = () => {
   return (
     <svg
       viewBox="0 0 260 260"
@@ -163,9 +163,9 @@ const GuaranteesIcon = () => {
       <path d="M70 195h160v-80l20-20v120H50ZM10 45h200v130H10Zm65 45-45 45v20h21.37l65.16-66.46a5 5 0 0 0 0-7l-13-13a5 5 0 0 0-7.08 0L85 80l15 15H80Z"></path>
     </svg>
   );
-}
+};
 
-const InternationComerceIcon = () => { 
+const InternationComerceIcon = () => {
   return (
     <svg
       viewBox="0 0 260 260"
@@ -184,10 +184,126 @@ const InternationComerceIcon = () => {
       <path d="M120 219.45V180h-10v-30H90l-46.14-46.14A90.07 90.07 0 0 0 120 219.45Zm30-177.22V70h-30v20h-20v20h30v30h40v50h-20v27.77a90 90 0 0 0 0-175.54ZM130 240a110 110 0 1 1 110-110 110 110 0 0 1-110 110Z"></path>
     </svg>
   );
-  
-}
-const InvestmentIcon = () => { 
+};
+const InvestmentIcon = () => {
   return (
-    <></>
-  )
-}
+    <svg
+      viewBox="0 0 260 260"
+      preserveAspectRatio="xMidYMid meet"
+      focusable="false"
+      fill="white"
+      aria-hidden="true"
+      style={{
+        pointerEvents: "none",
+        display: "block",
+        width: "100%",
+        height: "100%",
+        overflow: "hidden",
+      }}
+    >
+      <path d="m70 90-40 40V39.92A10 10 0 0 1 39.92 30h180.16a10 10 0 0 1 9.92 9.92v180.16a10 10 0 0 1-9.92 9.92H39.92a10 10 0 0 1-9.92-9.92V170l40-40 50 50v-40Zm110 30 20 20V80h-60l20 20-40 40v40Z"></path>
+    </svg>
+  );
+};
+
+const SustainableActionIcon = () => {
+  return (
+    <svg
+      viewBox="0 0 260 260"
+      preserveAspectRatio="xMidYMid meet"
+      focusable="false"
+      aria-hidden="true"
+      fill="white"
+      style={{
+        pointerEvents: "none",
+        display: "block",
+        width: "100%",
+        height: "100%",
+        overflow: "hidden",
+      }}
+    >
+      <path d="m100.76 101.05-10.62 10.62v.01l10.62-10.63zm89.77 55.44-10.62-10.62 10.62 10.62zm-121.06 0 2.65-2.65-2.65 2.65z"></path>
+      <path d="M220 152.25C220.18 64.62 130 10 130 10S39.82 64.62 40 152.25c.1 49.75 42.49 90.54 80 97.75v-40.49l-51.77-51.79 1.24-1.23 2.66-2.65 10.26-10.28L120 181.17v-32.85l-33.24-33.25 3.38-3.39 10.62-10.62.15-.15 19 19.09V64.23h20V120L159 100.9l14.15 14.17L140 148.32v32.85l37.6-37.61 2.3 2.31 10.62 10.62 1.24 1.23L140 209.51V250c37.49-7.26 79.9-48 80-97.75Z"></path>
+    </svg>
+  );
+};
+
+const WalletIcon = () => {
+  return (
+    <svg
+      viewBox="0 0 260 260"
+      preserveAspectRatio="xMidYMid meet"
+      focusable="false"
+      fill="white"
+      aria-hidden="true"
+      style={{
+        pointerEvents: "none",
+        display: "block",
+        width: "100%",
+        height: "100%",
+        overflow: "hidden",
+      }}
+    >
+      <path d="M10 107.5h174.55L206.36 85H10V51.26A11 11 0 0 1 20.94 40h218.12A11.08 11.08 0 0 1 250 51.26v157.48A11 11 0 0 1 239.06 220H20.94A11.08 11.08 0 0 1 10 208.74Zm141.82 56.25v22.5h43.63l21.82-22.5Z"></path>
+    </svg>
+  );
+};
+
+const UmbrellaIcon = () => {
+  return (
+    <svg
+      viewBox="0 0 260 260"
+      preserveAspectRatio="xMidYMid meet"
+      focusable="false"
+      fill="white"
+      aria-hidden="true"
+      style={{
+        pointerEvents: "none",
+        display: "block",
+        width: "100%",
+        height: "100%",
+        overflow: "hidden",
+      }}
+    >
+      <path d="M129.85 10.11c44 21.85 70.06 67.51 70.3 120h50c-.31-66.25-54.15-120.22-120.3-120Zm-.5 0c-66.19.4-119.5 53.75-119.19 120h50c-.24-52.49 25.44-97.74 69.19-120Z"></path>
+      <path d="M180.15 130.11c-.24-52.49-21.94-98.08-50.46-120h-.17C101.16 32.3 80 77.53 80.16 130.11h40v90a10 10 0 0 1-20 0v-10h-20v10a30 30 0 1 0 60 0v-90Z"></path>
+    </svg>
+  );
+};
+
+const ChatIcon = () => {
+  return (
+    <svg
+      viewBox="0 0 260 260"
+      preserveAspectRatio="xMidYMid meet"
+      focusable="false"
+      fill="white"
+      aria-hidden="true"
+      style={{
+        pointerEvents: "none",
+        display: "block",
+        width: "100%",
+        height: "100%",
+        overflow: "hidden",
+      }}
+    >
+      <path d="M240 20H20a10 10 0 0 0-10 10v210l40-40h190a10 10 0 0 0 10-10V30a10 10 0 0 0-10-10ZM90 120 50 90l40-30v20h60l-20 20H90Zm80 40v-20h-60l20-20h40v-20l40 30Z"></path>
+    </svg>
+  );
+};
+export {
+  ChatIcon,
+  UmbrellaIcon,
+  InternationComerceIcon,
+  WalletIcon,
+  SustainableActionIcon,
+  InvestmentIcon,
+  GuaranteesIcon,
+  TPVsIcon,
+  FundingIcon,
+  CollectionsIcon,
+  PaymentsIcon,
+  GlobalPositionIcon,
+  AccountIcon,
+  HomeIcon,
+};
