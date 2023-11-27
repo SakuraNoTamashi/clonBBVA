@@ -67,14 +67,14 @@ export const SideBarAux: React.FC<DashboardAppBarProps> = ({
                 </div>
                 <div>
                   <p className="user-name">
-                    51024736H-SANTIAGO MESIAS <br /> ANANGONO ESPINOSA
+                    45877341T-AMALIA <br /> DIEZ ANGULAR
                   </p>
                   <p className="user-role">Administrador</p>
                 </div>
               </article>
 
               <p id="company" className="corp">
-                CUSTOM TECHNOLOGY S.L. / B16733495
+                TECH AI SOLUTIONS S.L. / B16733495
               </p>
 
               <p id="reference" className="corp">
