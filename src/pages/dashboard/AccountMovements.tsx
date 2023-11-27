@@ -9,6 +9,7 @@ import { bbvaLogo } from "../../assets";
 import { FaChevronDown } from "react-icons/fa";
 import { MdDownloadForOffline } from "react-icons/md";
 import { IoPrint } from "react-icons/io5";
+import { SideBarAux } from "../../components/SideBarAux";
 const AccountMovementsPage = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const openSidebar = () => {
@@ -18,11 +19,94 @@ const AccountMovementsPage = () => {
   const closeSidebar = () => {
     setSidebarOpen(false);
   };
+  const movements = [
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+  ];
   return (
     <>
       <SideBar />
       <DashboardAppBar handle={openSidebar} />
-      <section className=" w-[86vw] h-[120vh] absolute right-0 top-[15vh] flex flex-col z-[-1]  gap-[20px] items-center ">
+      <section className=" w-[86vw] h-[120vh] absolute right-0 top-[15vh] flex flex-col z-1  gap-[20px] items-center ">
         <div className="w-[85%] flex">
           <h1 className="text-[25px] text-gray-800  font-light font-sans">
             Posición de cuentas
@@ -125,8 +209,11 @@ const AccountMovementsPage = () => {
               </a>
             </div>
           </div>
-        </div>
+              </div>
+              
+              
       </section>
+      {isSidebarOpen && <SideBarAux closeSidebar={closeSidebar} />}
     </>
   );
 };

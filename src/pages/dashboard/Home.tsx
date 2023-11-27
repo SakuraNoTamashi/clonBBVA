@@ -24,7 +24,6 @@ import { SideBarAux } from "../../components/SideBarAux";
 
 const MainDashboard = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  
 
   // Formatear la fecha según tu formato
 
@@ -39,7 +38,7 @@ const MainDashboard = () => {
     <>
       <SideBar />
       <DashboardAppBar handle={openSidebar} />
-      <section className=" w-[86vw] h-[120vh] absolute right-0 top-[15vh] flex flex-col z-[-1]   items-center ">
+      <section className=" w-[86vw] h-[120vh] absolute right-0 top-[15vh] flex flex-col z-1   items-center ">
         <div className="flex  w-[90%] h-[30vh]  justify-around ">
           <div className="bg-white p-6 rounded-sm shadow-lg w-[45%] h-[25vh] overflow-hidden">
             <h1 className="font-benton-sans font-sans  font-semibold  text-base text-gray-800">
@@ -150,7 +149,7 @@ const MainDashboard = () => {
           </button>
         </div>
       </section>
-      {isSidebarOpen && <SideBarAux closeSidebar={closeSidebar}/>}
+      {isSidebarOpen && <SideBarAux closeSidebar={closeSidebar} />}
     </>
   );
 };

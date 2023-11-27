@@ -11,6 +11,7 @@ import { TbFileCertificate } from "react-icons/tb";
 import { IoIosMore } from "react-icons/io";
 import React, { useState } from "react";
 import { SideBarAux } from "../../components/SideBarAux";
+import "./SidebarModal.css";
 
 const Card = ({ image = "", title = "", description = "" }) => {
   return (
@@ -43,7 +44,7 @@ const AccountsPage = () => {
     <>
       <SideBar />
       <DashboardAppBar handle={openSidebar} />
-      <section className=" w-[86vw] h-[120vh] absolute right-0 top-[15vh] flex flex-col z-[-1]  gap-[20px] items-center ">
+      <section className=" w-[86vw] h-[120vh] absolute right-0 top-[15vh] flex flex-col z-1  gap-[20px] items-center ">
         <div className="w-[85%] flex">
           <h1 className="text-[25px] text-gray-800  font-light font-sans">
             Posición de cuentas
@@ -143,7 +144,9 @@ const AccountsPage = () => {
             />
           </div>
         </div>
+        
       </section>
+
       {isSidebarOpen && <SideBarAux closeSidebar={closeSidebar} />}
     </>
   );
