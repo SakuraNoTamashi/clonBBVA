@@ -1,68 +1,73 @@
 import { useState } from "react";
-
+import { bbvaLogo } from "../assets";
+import { FaRegStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
+import { CiMenuKebab } from "react-icons/ci";
 const AccountsPerBank = () => {
   const [Active, setActive] = useState(false);
-  const data = [
-    ["Row 1, Cell 1", "Row 1, Cell 2", "Row 1, Cell 3"],
-    ["Row 2, Cell 1", "Row 2, Cell 2", "Row 2, Cell 3"],
-    ["Row 3, Cell 1", "Row 3, Cell 2", "Row 3, Cell 3"],
-  ];
+
   return (
     <>
-      <div className=" w-[80%] h-[30vh] flex flex-col items-center border-b border-gray-200">
-        <div className="flex justify-between h-[5vh] w-full border-b border-gray-200">
+      <div className=" w-[85%] h-[30vh] flex flex-col items-center border-b border-gray-200">
+        <div className="flex justify-between h-[5vh] w-full border-b border-gray-200 text-currency font-sans font-bold">
           <p>EUR</p>
           <div className="flex">SALDO DISPONIBLE / SALDO EN CUENTA</div>
         </div>
-        <div className="w-[95%] h-[5vh] flex justify-between">
-          <div className="flex">
+        <div className="w-[95%] h-[5vh] flex justify-between items-center mt-[2vh]">
+          <div className="flex gap-[25px] ">
             {Active ? <h1>-</h1> : <h1>+</h1>}
-            <h2>Icon</h2>
+            <img src={bbvaLogo} height={40} width={40} />
             <div className="flex flex-col">
-              <strong>BBVA</strong>
-              <p>1 Cuenta</p>
+              <p className="text-[19px] font-semibold">BBVA</p>
+              <p className="text-gray-500 font-medium">1 Cuenta</p>
             </div>
           </div>
-          <div className="flex">0,00 EUR / 0,00 EUR</div>
+          <p className="text-[19px] font-semibold">0,00 EUR / 0,00 EUR</p>
         </div>
 
-        <div className=" w-[96%] ml-[4vw]">
+        <div className=" w-[96%] ml-[4vw] mt-5">
           <table className="table-auto">
-            <thead className="border-b px-4 py-2">
-              <th>FAV.</th>
-              <th className="w-[65%]">ALIAS/NÚMERO DE CUENTA</th>
-              <th className="w-[10%]">SALDO DISPONIBLE</th>
-              <th className="">SALDO EN CUENTA</th>
-              <th>a</th>
+            <thead className="border-b px-4 py-2 text-gray-500  font-sans text-left">
+              <th className=" font-medium ">FAV.</th>
+              <th className="w-[65%] font-medium ">ALIAS/NÚMERO DE CUENTA</th>
+              <th className="w-[10%] font-medium ">SALDO DISPONIBLE</th>
+              <th className="font-medium text-end">SALDO EN CUENTA</th>
+              <th></th>
             </thead>
-            <tbody>
+            <tbody className="border-b border-gray-200">
               <tr>
-                <td>
-                  <h1>icon</h1>
+                <td className="text-center">
+                  <FaStar
+                    color="#ffcc00"
+                    size={30}
+                    className="cursor-pointer"
+                  />
                 </td>
 
-                <td>ES3801826975660201653022</td>
+                <td className=" cursor-pointer text-infoBlue font-bold text-[22px]">
+                  ES3801826975660201653022
+                </td>
                 <td>
                   <div className="flex flex-col justify-center items-end">
-                    <p className="flex">
-                      0,00 <p>EUR</p>
+                    <p className="flex text-[25px] text-gray-600 items-center gap-2">
+                      0,00 <p className="text-[15px]">EUR</p>
                     </p>
-                    <p>Hace 2 minutos</p>
+                    <p className="text-gray-400 text-[16px]">Hace 2 minutos</p>
                   </div>
                 </td>
 
                 <td>
                   <div className="flex flex-col justify-center items-end">
-                    <p className="flex">
-                      0,00 <p>EUR</p>
+                    <p className="flex text-[25px] text-gray-600 items-center gap-2">
+                      0,00 <p className="text-[15px]">EUR</p>
                     </p>
-                    <p>Hace 2 minutos</p>
+                    <p className="text-gray-400 text-[16px]">Hace 2 minutos</p>
                   </div>
                 </td>
 
                 <td>
-                  <div className="flex w-[50px] justify-center items-center">
-                    <a>:</a>
+                  <div className="flex  justify-center items-center  cursor-pointer">
+                    <CiMenuKebab color="#1973B8" size={ 30} />
                   </div>
                 </td>
               </tr>

@@ -10,6 +10,7 @@ import {
   HomeIcon,
   InternationComerceIcon,
   InvestmentIcon,
+  LogoutIcon,
   PaymentsIcon,
   SustainableActionIcon,
   TPVsIcon,
@@ -21,12 +22,14 @@ interface AppBarOptionProps {
   icon: () => JSX.Element;
   label: string;
   onClick: React.MouseEventHandler<HTMLDivElement>;
+  logout: boolean;
 }
 
 const AppBarOption: React.FC<AppBarOptionProps> = ({
   icon,
   label,
   onClick,
+  logout,
 }) => {
   const [hovered, setHovered] = useState(false);
   const [Active, setActive] = useState(false);
@@ -37,17 +40,21 @@ const AppBarOption: React.FC<AppBarOptionProps> = ({
 
   return (
     <div
-      className={`w-full h-[60px]  ${
-        Active ? "border-l-[4px]" : ""
-      } border-white  ${
+      className={`w-full h-[60px]  ${Active ? "border-l-[4px]" : ""} 
+      "border-white"
+      ${
         hovered || Active ? "bg-appBarHighlighted " : "bg-navyBlue"
-      }  flex items-center  gap-[10px] `}
+      }  flex items-center  gap-[15px] `}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={handleClick}
     >
       <div className="w-[25px] h-[25px] ml-[20px]">{icon()}</div>
-      <p className="font-'Benton Sans', sans-serif  font-bold text-white">
+      <p
+        className={`font-'Benton Sans', sans-serif  font-bold ${
+          false ? "text-indicativeYellow" : "text-white"
+        }`}
+      >
         {label}
       </p>
     </div>
@@ -76,37 +83,49 @@ const SideBar = () => {
 
   const button3: ButtonTuple = [ChatIcon, "Danos tu opinión"];
   return (
-    <section className="z-99 w-[13vw] h-screen bg-navyBlue fixed left-0 flex flex-col items-start overflow-y-scroll bara">
+    <section className="z-99 w-[13vw] h-screen bg-navyBlue fixed left-0 flex flex-col items-start ">
       <img src={logo} />
+      <div className="flex flex-col  h-[90%] items-start overflow-y-scroll">
+        <div className="flex flex-col items-center w-full gap-[10px]  pt-[20px] ">
+          {buttons.map((button, index) => (
+            <AppBarOption
+              key={`appbar-button-${index}`}
+              icon={button[0]}
+              label={`${button[1]}`}
+              onClick={() => {}}
+              logout={false}
+            />
+          ))}
+          <div className="w-[90%] border-b-[2px] border-white"></div>
+        </div>
 
-      <div className="flex flex-col items-center w-full gap-[10px]  pt-[20px] ">
-        {buttons.map((button, index) => (
-          <AppBarOption
-            key={`appbar-button-${index}`}
-            icon={button[0]}
-            label={`${button[1]}`}
-            onClick={() => {}}
-          />
-        ))}
-        <div className="w-[90%] border-b-[2px] border-white"></div>
+        <div className="flex flex-col items-center w-full gap-[10px] ">
+          {buttons2.map((button, index) => (
+            <AppBarOption
+              key={`appbar-button-${index}`}
+              icon={button[0]}
+              label={`${button[1]}`}
+              onClick={() => {}}
+              logout={false}
+            />
+          ))}
+          <div className="w-[90%] border-b-[2px] border-white"></div>
+        </div>
+        <AppBarOption
+          key={`appbar-button-Opinion`}
+          icon={button3[0]}
+          label={`${button3[1]}`}
+          onClick={() => {}}
+          logout={false}
+        />
       </div>
 
-      <div className="flex flex-col items-center w-full gap-[10px] ">
-        {buttons2.map((button, index) => (
-          <AppBarOption
-            key={`appbar-button-${index}`}
-            icon={button[0]}
-            label={`${button[1]}`}
-            onClick={() => {}}
-          />
-        ))}
-        <div className="w-[90%] border-b-[2px] border-white"></div>
-      </div>
       <AppBarOption
         key={`appbar-button-Opinion`}
-        icon={button3[0]}
-        label={`${button3[1]}`}
+        icon={LogoutIcon}
+        label={`Salir`}
         onClick={() => {}}
+        logout={true}
       />
     </section>
   );
