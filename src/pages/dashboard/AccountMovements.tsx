@@ -19,89 +19,89 @@ const AccountMovementsPage = () => {
   const closeSidebar = () => {
     setSidebarOpen(false);
   };
-//   const movements = [
-//     {
-//       fecha: "21-05-2023",
-//       clave: "123123123",
-//       concepto1: "TRANSFERENCIAS",
-//       concepto2: "-",
-//       fechaValor: "21-06-2023",
-//       importes: "-200",
-//       saldo: "32.191,17",
-//     },
-//     {
-//       fecha: "21-05-2023",
-//       clave: "123123123",
-//       concepto1: "TRANSFERENCIAS",
-//       concepto2: "-",
-//       fechaValor: "21-06-2023",
-//       importes: "-200",
-//       saldo: "32.191,17",
-//     },
-//     {
-//       fecha: "21-05-2023",
-//       clave: "123123123",
-//       concepto1: "TRANSFERENCIAS",
-//       concepto2: "-",
-//       fechaValor: "21-06-2023",
-//       importes: "-200",
-//       saldo: "32.191,17",
-//     },
-//     {
-//       fecha: "21-05-2023",
-//       clave: "123123123",
-//       concepto1: "TRANSFERENCIAS",
-//       concepto2: "-",
-//       fechaValor: "21-06-2023",
-//       importes: "-200",
-//       saldo: "32.191,17",
-//     },
-//     {
-//       fecha: "21-05-2023",
-//       clave: "123123123",
-//       concepto1: "TRANSFERENCIAS",
-//       concepto2: "-",
-//       fechaValor: "21-06-2023",
-//       importes: "-200",
-//       saldo: "32.191,17",
-//     },
-//     {
-//       fecha: "21-05-2023",
-//       clave: "123123123",
-//       concepto1: "TRANSFERENCIAS",
-//       concepto2: "-",
-//       fechaValor: "21-06-2023",
-//       importes: "-200",
-//       saldo: "32.191,17",
-//     },
-//     {
-//       fecha: "21-05-2023",
-//       clave: "123123123",
-//       concepto1: "TRANSFERENCIAS",
-//       concepto2: "-",
-//       fechaValor: "21-06-2023",
-//       importes: "-200",
-//       saldo: "32.191,17",
-//     },
-//     {
-//       fecha: "21-05-2023",
-//       clave: "123123123",
-//       concepto1: "TRANSFERENCIAS",
-//       concepto2: "-",
-//       fechaValor: "21-06-2023",
-//       importes: "-200",
-//       saldo: "32.191,17",
-//     },
-//     {
-//       fecha: "21-05-2023",
-//       clave: "123123123",
-//       concepto1: "TRANSFERENCIAS",
-//       concepto2: "-",
-//       fechaValor: "21-06-2023",
-//       importes: "-200",
-//       saldo: "32.191,17",
-//     },
-//   ];
+  //   const movements = [
+  //     {
+  //       fecha: "21-05-2023",
+  //       clave: "123123123",
+  //       concepto1: "TRANSFERENCIAS",
+  //       concepto2: "-",
+  //       fechaValor: "21-06-2023",
+  //       importes: "-200",
+  //       saldo: "32.191,17",
+  //     },
+  //     {
+  //       fecha: "21-05-2023",
+  //       clave: "123123123",
+  //       concepto1: "TRANSFERENCIAS",
+  //       concepto2: "-",
+  //       fechaValor: "21-06-2023",
+  //       importes: "-200",
+  //       saldo: "32.191,17",
+  //     },
+  //     {
+  //       fecha: "21-05-2023",
+  //       clave: "123123123",
+  //       concepto1: "TRANSFERENCIAS",
+  //       concepto2: "-",
+  //       fechaValor: "21-06-2023",
+  //       importes: "-200",
+  //       saldo: "32.191,17",
+  //     },
+  //     {
+  //       fecha: "21-05-2023",
+  //       clave: "123123123",
+  //       concepto1: "TRANSFERENCIAS",
+  //       concepto2: "-",
+  //       fechaValor: "21-06-2023",
+  //       importes: "-200",
+  //       saldo: "32.191,17",
+  //     },
+  //     {
+  //       fecha: "21-05-2023",
+  //       clave: "123123123",
+  //       concepto1: "TRANSFERENCIAS",
+  //       concepto2: "-",
+  //       fechaValor: "21-06-2023",
+  //       importes: "-200",
+  //       saldo: "32.191,17",
+  //     },
+  //     {
+  //       fecha: "21-05-2023",
+  //       clave: "123123123",
+  //       concepto1: "TRANSFERENCIAS",
+  //       concepto2: "-",
+  //       fechaValor: "21-06-2023",
+  //       importes: "-200",
+  //       saldo: "32.191,17",
+  //     },
+  //     {
+  //       fecha: "21-05-2023",
+  //       clave: "123123123",
+  //       concepto1: "TRANSFERENCIAS",
+  //       concepto2: "-",
+  //       fechaValor: "21-06-2023",
+  //       importes: "-200",
+  //       saldo: "32.191,17",
+  //     },
+  //     {
+  //       fecha: "21-05-2023",
+  //       clave: "123123123",
+  //       concepto1: "TRANSFERENCIAS",
+  //       concepto2: "-",
+  //       fechaValor: "21-06-2023",
+  //       importes: "-200",
+  //       saldo: "32.191,17",
+  //     },
+  //     {
+  //       fecha: "21-05-2023",
+  //       clave: "123123123",
+  //       concepto1: "TRANSFERENCIAS",
+  //       concepto2: "-",
+  //       fechaValor: "21-06-2023",
+  //       importes: "-200",
+  //       saldo: "32.191,17",
+  //     },
+  //   ];
   return (
     <>
       <SideBar />
@@ -126,7 +126,7 @@ const AccountMovementsPage = () => {
                     Cuenta BBVA EMpresas
                   </p>
                   <p className="text-[23px] text-gray-500">
-                    ES3801826975660201653022
+                    ES380182600850005351247
                   </p>
                 </div>
                 <FaChevronDown color="#1973B8" className="ml-[30%]" />
@@ -135,12 +135,12 @@ const AccountMovementsPage = () => {
               <div className="flex gap-10">
                 <div className="flex flex-col items-end">
                   <p className="text-[24px] text-gray-500">Disponible</p>
-                  <p className="text-[24px] text-black font-medium">0,00 EUR</p>
+                  <p className="text-[24px] text-black font-medium">45.522,12 EUR</p>
                 </div>
 
                 <div className="flex flex-col items-end font-sans">
                   <p className="text-[24px] text-gray-500">Saldo en cuenta</p>
-                  <p className="text-[24px] text-black font-medium">0,00 EUR</p>
+                  <p className="text-[24px] text-black font-medium">50.504,26 EUR</p>
                 </div>
               </div>
             </div>
@@ -148,7 +148,7 @@ const AccountMovementsPage = () => {
             <div className="flex gap-14 font-sans">
               <h1 className="text-[32px] text-gray-500">cuenta corriente</h1>
               <h1 className="text-[32px] text-gray-500">
-                CUSTOM TECHNOLOGY S.L.
+                TECH AI SOLUTIONS S.L
               </h1>
             </div>
             <div className="flex gap-[30px]">
@@ -209,9 +209,7 @@ const AccountMovementsPage = () => {
               </a>
             </div>
           </div>
-              </div>
-              
-              
+        </div>
       </section>
       {isSidebarOpen && <SideBarAux closeSidebar={closeSidebar} />}
     </>

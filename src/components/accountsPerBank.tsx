@@ -29,7 +29,9 @@ const AccountsPerBank = () => {
               <p className="text-gray-500 font-medium">1 Cuenta</p>
             </div>
           </div>
-          <p className="text-[19px] font-semibold">0,00 EUR / 0,00 EUR</p>
+          <p className="text-[19px] font-semibold">
+            45.522,12 EUR / 50.504,26 EUR
+          </p>
         </div>
 
         <div className=" w-[96%] ml-[4vw] mt-5">
@@ -53,13 +55,13 @@ const AccountsPerBank = () => {
 
                 <td className="text-infoBlue font-bold text-[22px]">
                   <span style={{ cursor: "pointer" }} onClick={handleSpanClick}>
-                    ES3801826975660201653022
+                    ES380182600850005351247
                   </span>
                 </td>
                 <td>
                   <div className="flex flex-col justify-center items-end">
                     <p className="flex text-[25px] text-gray-600 items-center gap-2">
-                      0,00 <p className="text-[15px]">EUR</p>
+                      45.522,12 <p className="text-[15px]">EUR</p>
                     </p>
                     <p className="text-gray-400 text-[16px]">Hace 2 minutos</p>
                   </div>
@@ -68,7 +70,7 @@ const AccountsPerBank = () => {
                 <td>
                   <div className="flex flex-col justify-center items-end">
                     <p className="flex text-[25px] text-gray-600 items-center gap-2">
-                      0,00 <p className="text-[15px]">EUR</p>
+                      50.504,26 <p className="text-[15px]">EUR</p>
                     </p>
                     <p className="text-gray-400 text-[16px]">Hace 2 minutos</p>
                   </div>

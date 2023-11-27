@@ -124,7 +124,7 @@ const MainDashboard = () => {
             <img src={lacaixa} width={45} />
             <img src={andMore} width={45} />
           </div>
-          <div className="border-r-[3px] border-gray-400 h-[4vh] w-[3px]"></div>
+          <div className="border-l-[3px] border-gray-400 h-[4vh] w-[3px] ml-10"></div>
           <p className="text-[22px] text-gray-600">
             Añade más bancos para tener una visión completa de tu tesorería.
           </p>
