@@ -9,16 +9,26 @@ import { BsFileBarGraphFill } from "react-icons/bs";
 import { TbReportSearch } from "react-icons/tb";
 import { TbFileCertificate } from "react-icons/tb";
 import { IoIosMore } from "react-icons/io";
+import React, { useState } from "react";
+import { SideBarAux } from "../../components/SideBarAux";
 
 const Card = () => {
   return <div className="w-[20vw] h-[45vh] bg-gray-200"></div>;
 };
 
 const AccountsPage = () => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const openSidebar = () => {
+    setSidebarOpen(true);
+  };
+
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
   return (
     <>
       <SideBar />
-      <DashboardAppBar />
+      <DashboardAppBar handle={openSidebar} />
       <section className=" w-[86vw] h-[120vh] absolute right-0 top-[15vh] flex flex-col z-[-1]  gap-[20px] items-center ">
         <div className="w-[85%] flex">
           <h1 className="text-[25px] text-gray-800  font-light font-sans">
@@ -112,6 +122,7 @@ const AccountsPage = () => {
           </div>
         </div>
       </section>
+      {isSidebarOpen && <SideBarAux closeSidebar={closeSidebar} />}
     </>
   );
 };
