@@ -12,8 +12,22 @@ import { IoIosMore } from "react-icons/io";
 import React, { useState } from "react";
 import { SideBarAux } from "../../components/SideBarAux";
 
-const Card = () => {
-  return <div className="w-[20vw] h-[45vh] bg-gray-200"></div>;
+const Card = ({ image = "", title = "", description = "" }) => {
+  return (
+    <div className="w-[20vw] h-[45vh] bg-gray-200 flex flex-col justify-start gap-[20px]">
+      <img
+        alt=""
+        id="image"
+        className="w-full h-[60%]"
+        aria-hidden="true"
+        src={image}
+      />
+      <h1 className="text-[35px] ml-[30px]">{title}</h1>
+      <p className="text-[20px] ml-[30px] text-gray-500 text-left w-[80%]">
+        {description}
+      </p>
+    </div>
+  );
 };
 
 const AccountsPage = () => {
@@ -116,9 +130,17 @@ const AccountsPage = () => {
             {" "}
             SOLUCIONES PARA UNA GESTIÓN MÁS EFICIENTE
           </h2>
-          <div className="flex justify-around">
-            <Card />
-            <Card />
+          <div className="flex justify-around mt-[20px]">
+            <Card
+              image="https://assets.caasbbva.com/content/dam/caas/spain/ufe/images/cards/cuentas/factoring.jpg"
+              title="Factoring"
+              description="Cobra anticipadamente las deudas que otros tengan contigo. En BBVA gestionamos tus créditos comerciales."
+            />
+            <Card
+              image="https://assets.caasbbva.com/content/dam/caas/spain/ufe/images/cards/cuentas/confirming.jpg"
+              title="Confirming"
+              description="Te anticipamos el cobro del 100 % de las facturas pendientes, sin documentación extra ni estudios previos."
+            />
           </div>
         </div>
       </section>
