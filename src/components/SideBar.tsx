@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./custom.css";
 import { logo } from "../assets";
 import {
   AccountIcon,
@@ -85,7 +86,7 @@ const SideBar = () => {
   return (
     <section className="z-99 w-[13vw] h-screen bg-navyBlue fixed left-0 flex flex-col items-start ">
       <img src={logo} />
-      <div className="flex flex-col  h-[90%] items-start overflow-y-scroll">
+      <div className="flex flex-col  h-[90%] items-start overflow-y-scroll customScroll">
         <div className="flex flex-col items-center w-full gap-[10px]  pt-[20px] ">
           {buttons.map((button, index) => (
             <AppBarOption

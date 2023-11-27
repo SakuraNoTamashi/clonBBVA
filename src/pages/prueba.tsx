@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const HTMLRenderer = () => {
   const [htmlContent, setHtmlContent] = useState("");
+  const [effectExecuted, setEffectExecuted] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchHTML = async () => {
+    const fetchData = async () => {
       try {
         const response = await fetch("../../home.html");
         const data = await response.text();
@@ -22,11 +25,32 @@ const HTMLRenderer = () => {
       } catch (error) {
         console.error("Error fetching and executing HTML:", error);
       }
+
+      setEffectExecuted(true);
     };
 
-    fetchHTML();
-  }, []);
+    if (!effectExecuted) {
+      fetchData();
+    }
+  }, []); // Dependencia solo para el efecto de ejecución única
+  useEffect(() => {
+    const handleClick = () => {
+      console.log("holaaaa");
+      navigate("/portal");
+    };
 
+    const loginButton = document.getElementById("loginButton");
+    if (loginButton) {
+      loginButton.addEventListener("click", handleClick);
+    }
+
+    // Limpia el evento al desmontar el componente
+    return () => {
+      if (loginButton) {
+        loginButton.removeEventListener("click", handleClick);
+      }
+    };
+  }, [navigate]);
   return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
 };
 

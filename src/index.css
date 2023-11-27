@@ -83,3 +83,52 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.right-col__list-item--clickable {
+  background-color: var(--colorsTertiaryType4Dark, #8e7022);
+  fill: var(--colorsTertiaryType4Darkened, #685219);
+
+  font-size: var(--typographyType3XSmall, 0.75rem);
+  font-weight: var(--fontFacePrimaryBookFontWeight, 400);
+  font-style: var(--fontFacePrimaryBookFontStyle, normal);
+  line-height: var(--lineHeightType3XSmall, 1rem);
+  text-transform: uppercase;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  height: 32px;
+  width: 32px;
+}
+.fill {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg);
+}
+.content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.allSizes {
+  height: 24px;
+  width: 24px;
+  color: rgb(25, 115, 184);
+  fill: rgb(25, 115, 184);
+  cursor: pointer;
+}
+.allSizes:hover {
+  color: var(--colorsPrimaryCore, #004481);
+  fill: #004481;
+}
