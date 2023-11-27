@@ -25,7 +25,13 @@ const HTMLRenderer = () => {
       } catch (error) {
         console.error("Error fetching and executing HTML:", error);
       }
-
+      const handleClick = () => {
+        // alert("hola");
+        // console.log("holaaaa");
+        navigate("/portal");
+      };
+      const loginButton = document.getElementById("loginButton");
+      loginButton?.addEventListener("click", handleClick);
       setEffectExecuted(true);
     };
 
@@ -33,24 +39,7 @@ const HTMLRenderer = () => {
       fetchData();
     }
   }, []); // Dependencia solo para el efecto de ejecución única
-  useEffect(() => {
-    const handleClick = () => {
-      console.log("holaaaa");
-      navigate("/portal");
-    };
 
-    const loginButton = document.getElementById("loginButton");
-    if (loginButton) {
-      loginButton.addEventListener("click", handleClick);
-    }
-
-    // Limpia el evento al desmontar el componente
-    return () => {
-      if (loginButton) {
-        loginButton.removeEventListener("click", handleClick);
-      }
-    };
-  }, [navigate]);
   return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
 };
 
