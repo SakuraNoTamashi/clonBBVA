@@ -3372,6 +3372,7 @@
                                             font-weight: 700;
                                             color: white;
                                           "
+                                          id="loginButton"
                                         >
                                           Entrar
                                         </button>
@@ -8165,11 +8166,18 @@
     </script>
 
     <script>
-      document.getElementById("access__close").addEventListener("click", () => {
+      if (document.getElementById("access__close")) {
         document
-          .getElementById("access__container__content")
-          .classList.add("invisible");
-      });
+          .getElementById("access__close")
+          .addEventListener("click", () => {
+            const containerContent = document.getElementById(
+              "access__container__content"
+            );
+            if (containerContent) {
+              containerContent.classList.add("invisible");
+            }
+          });
+      }
 
       function randomIntFromInterval(min, max) {
         // min and max included
@@ -8234,10 +8242,21 @@
                 //   getCookieLlangNewPG("header_segment") != "empresas"
                 //     ? urlP
                 //     : urlE;
-                alert("holaaa");
                 document
                   .getElementById("access__container__content")
                   .classList.remove("invisible");
+                setTimeout(() => {
+                  document
+                    .querySelector(".access__close")
+                    .addEventListener("click", () => {
+                      const containerContent = document.getElementById(
+                        "access__container__content"
+                      );
+                      if (containerContent) {
+                        containerContent.classList.add("invisible");
+                      }
+                    });
+                }, 200);
               },
               true
             );

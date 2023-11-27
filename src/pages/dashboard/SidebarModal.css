@@ -1,0 +1,294 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0000009a;
+  transition: right 0.3s ease-out;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sidebar-content {
+  height: 100vh;
+  width: 448px;
+  background-color: rgb(244, 244, 244);
+  padding: 64px 16px 24px 24px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+.user-info {
+  padding-top: calc(
+    ((2 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem
+  );
+}
+.avatar {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: calc(
+    ((3 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem
+  );
+  height: 72px;
+}
+.user-name {
+  display: block;
+  margin: 0px;
+  color: rgb(18, 18, 18);
+
+  font-family: "Benton Sans", sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-variant-position: normal;
+  font-variation-settings: normal;
+  font-weight: 500;
+  height: 48px;
+  line-height: 24px;
+}
+.user-role {
+  display: block;
+  margin: 0px;
+  color: rgb(18, 18, 18);
+
+  font-family: "Benton Sans", sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  font-size: 15px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-variant-position: normal;
+  font-variation-settings: normal;
+  font-weight: 300;
+  height: 48px;
+  line-height: 24px;
+}
+.initials-clip-box {
+  margin-right: calc(
+    ((1 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem
+  );
+}
+.heading {
+  flex: 0 0 auto;
+  display: block;
+  font-size: var(--typographyType4XLarge, 1.625rem);
+  line-height: var(--lineHeightType4XLarge, 2rem);
+  margin: 0
+    calc(((3 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem)
+    calc(((3 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem) 0;
+}
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.corp {
+  color: rgb(102, 102, 102);
+
+  font-family: "Benton Sans", sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  font-size: 15px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-variant-position: normal;
+  font-variation-settings: normal;
+  font-weight: 300;
+  height: 24px;
+  line-height: 24px;
+  margin-block-end: 15px;
+  margin-block-start: 15px;
+}
+.scrollable {
+  flex: 1 1 0px;
+  min-height: 0px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.scrollable-content {
+  padding-bottom: calc(
+    ((8 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem
+  );
+  overflow: hidden;
+}
+.panel-card {
+  margin: calc(
+      ((2 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem
+    )
+    0;
+  font-size: var(--typographyTypeSmall, 0.9375rem);
+  line-height: var(--lineHeightTypeXLarge, 1.5rem);
+}
+.content-card {
+  box-shadow: var(--boxShadowType2, 0 1px 3px 0 rgba(18, 18, 18, 0.3));
+  background: var(--colorsPrimaryCoreLightened, #ffffff);
+  padding: calc(
+      ((2 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem
+    )
+    calc(((3 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem)
+    calc(((3 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem);
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+}
+.text2 {
+  display: block;
+  margin: 0px;
+  color: rgb(25, 115, 184);
+
+  font-family: "Benton Sans", sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  font-size: 15px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-variant-position: normal;
+  font-variation-settings: normal;
+  font-weight: 600;
+  height: 24px;
+  line-height: 24px;
+}
+.card-text {
+  display: block;
+  margin: 0px;
+  color: rgb(102, 102, 102);
+
+  font-family: "Benton Sans", sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  font-size: 15px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-variant-position: normal;
+  font-variation-settings: normal;
+  font-weight: 400;
+  height: 72px;
+  line-height: 24px;
+}
+.scroller {
+  flex: 1 1 auto;
+  min-height: 0px;
+  overflow-y: scroll;
+  height: 100%;
+}
+.footer {
+  padding-bottom: calc(
+    ((3 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem
+  );
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: calc(
+    ((2 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem
+  );
+}
+.tarifas {
+  color: rgb(0, 0, 238);
+  font-family: "Benton Sans", sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  font-size: 15px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-variant-position: normal;
+  font-variation-settings: normal;
+  font-weight: 500;
+  height: 24px;
+  line-height: 24px;
+}
+.connection {
+  margin-bottom: calc(
+    ((1 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem
+  );
+  color: rgb(18, 18, 18);
+  font-family: "Benton Sans", sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  font-size: 15px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-variant-position: normal;
+  font-variation-settings: normal;
+  font-weight: 400;
+  height: 24px;
+  line-height: 24px;
+  margin-block-end: 8px;
+  margin-block-start: 15px;
+  margin-bottom: 8px;
+}
+span.fecha {
+  margin-bottom: calc(
+    ((1 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem
+  );
+  color: rgb(18, 18, 18);
+  font-family: "Benton Sans", sans-serif;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-optical-sizing: auto;
+  font-size: 15px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-alternates: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-variant-position: normal;
+  font-variation-settings: normal;
+  font-weight: 550;
+  height: 24px;
+  line-height: 24px;
+}
