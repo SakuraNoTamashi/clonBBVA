@@ -31,7 +31,7 @@ const AppBarOption: React.FC<AppBarOptionProps> = ({
   icon,
   label,
   onClick,
-  logout,
+
   route,
 }) => {
   const [hovered, setHovered] = useState(false);

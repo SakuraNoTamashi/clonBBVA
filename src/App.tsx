@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
-import HomePage from "./pages/HomeScreen";
+
 import HTMLRenderer from "./pages/prueba.tsx";
-import LoginScreen from "./pages/dashboard/Home";
+
 import MainDashboard from "./pages/dashboard/Home";
 import AccountsPage from "./pages/dashboard/Accounts.tsx";
 

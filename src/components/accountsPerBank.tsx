@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { bbvaLogo } from "../assets";
-import { FaRegStar } from "react-icons/fa";
+
 import { FaStar } from "react-icons/fa";
-import { CiMenuKebab } from "react-icons/ci";
+
 import { IoMdMore } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 
 const AccountsPerBank = () => {
   const [Active, setActive] = useState(false);
+  setActive(false)
   const navigate = useNavigate();
   const handleSpanClick = () => {
     navigate("/portal/details");

@@ -1,5 +1,5 @@
-import ItemCard from "../../components/ItemsCard";
-import React, { useState } from "react";
+
+import { useState } from "react";
 
 import "./SidebarModal.css";
 import SideBar from "../../components/SideBar";
