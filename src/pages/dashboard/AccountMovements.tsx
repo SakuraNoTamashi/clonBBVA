@@ -15,11 +15,94 @@ const AccountMovementsPage = () => {
   const closeSidebar = () => {
     setSidebarOpen(false);
   };
+  const movements = [
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+    {
+      fecha: "21-05-2023",
+      clave: "123123123",
+      concepto1: "TRANSFERENCIAS",
+      concepto2: "-",
+      fechaValor: "21-06-2023",
+      importes: "-200",
+      saldo: "32.191,17",
+    },
+  ];
   return (
     <>
       <SideBar />
       <DashboardAppBar handle={openSidebar} />
-      <section className=" w-[86vw] h-[120vh] absolute right-0 top-[15vh] flex flex-col z-[-1]  gap-[20px] items-center ">
+      <section className=" w-[86vw] h-[120vh] absolute right-0 top-[15vh] flex flex-col z-1  gap-[20px] items-center ">
         <div className="w-[85%] flex">
           <h1 className="text-[25px] text-gray-800  font-light font-sans">
             Posición de cuentas
@@ -82,6 +165,48 @@ const AccountMovementsPage = () => {
             </div>
           </div>
         </div>
+        <table className="especial">
+          <thead className="especial">
+            <tr className="especial">
+              <th className="especial" style={{ width: "12%" }}>
+                F. OPER.
+              </th>
+              <th className="especial" style={{ width: "12%" }}>
+                CLAVE
+              </th>
+              <th className="especial" style={{ width: "40%" }}>
+                CONCEPTO
+              </th>
+              <th className="especial" style={{ width: "12%" }}>
+                F. VALOR
+              </th>
+              <th className="especial" style={{ width: "12%" }}>
+                IMPORTES
+              </th>
+              <th className="especial" style={{ width: "12%" }}>
+                SALDO
+              </th>
+            </tr>
+          </thead>
+          <tbody className="especial">
+            {movements.map((el, i) => {
+              return (
+                <tr className="especial" key={`fila_movimiento_${i}`}>
+                  <td className="especial">{el.fecha}</td>
+                  <td className="especial">{el.clave}</td>
+                  <td className="especial" style={{ textAlign: "left" }}>
+                    {el.concepto1} <br /> {el.concepto2}
+                  </td>
+                  <td className="especial">{el.fechaValor}</td>
+                  <td className="especial">{el.importes}</td>
+                  <td className="especial" style={{ textAlign: "right" }}>
+                    {el.saldo}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </section>
       {isSidebarOpen && <SideBarAux closeSidebar={closeSidebar} />}
     </>

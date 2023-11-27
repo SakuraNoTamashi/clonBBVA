@@ -4,9 +4,14 @@ import { FaRegStar } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { CiMenuKebab } from "react-icons/ci";
 import { IoMdMore } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
+
 const AccountsPerBank = () => {
   const [Active, setActive] = useState(false);
-
+  const navigate = useNavigate();
+  const handleSpanClick = () => {
+    navigate("/portal/details");
+  };
   return (
     <>
       <div className=" w-[85%] h-[30vh] flex flex-col items-center border-b border-gray-200">
@@ -45,8 +50,10 @@ const AccountsPerBank = () => {
                   />
                 </td>
 
-                <td className=" cursor-pointer text-infoBlue font-bold text-[22px]">
-                  ES3801826975660201653022
+                <td className="text-infoBlue font-bold text-[22px]">
+                  <span style={{ cursor: "pointer" }} onClick={handleSpanClick}>
+                    ES3801826975660201653022
+                  </span>
                 </td>
                 <td>
                   <div className="flex flex-col justify-center items-end">

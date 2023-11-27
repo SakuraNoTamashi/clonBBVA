@@ -44,7 +44,7 @@ const AccountsPage = () => {
     <>
       <SideBar />
       <DashboardAppBar handle={openSidebar} />
-      <section className=" w-[86vw] h-[120vh] absolute right-0 top-[15vh] flex flex-col z-[-1]  gap-[20px] items-center ">
+      <section className=" w-[86vw] h-[120vh] absolute right-0 top-[15vh] flex flex-col z-1  gap-[20px] items-center ">
         <div className="w-[85%] flex">
           <h1 className="text-[25px] text-gray-800  font-light font-sans">
             Posición de cuentas
@@ -144,52 +144,7 @@ const AccountsPage = () => {
             />
           </div>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>F. OPER.</th>
-              <th>CLAVE</th>
-              <th>CONCEPTO</th>
-              <th>F. VALOR</th>
-              <th>IMPORTES</th>
-              <th>SALDO</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Fecha Operación</td>
-              <td>Clave</td>
-              <td style={{ textAlign: "left" }}>Concepto</td>
-              <td>Fecha Valor</td>
-              <td>Importes</td>
-              <td style={{ textAlign: "right" }}>Saldo</td>
-            </tr>
-            <tr>
-              <td>Fecha Operación</td>
-              <td>Clave</td>
-              <td style={{ textAlign: "left" }}>Concepto</td>
-              <td>Fecha Valor</td>
-              <td>Importes</td>
-              <td style={{ textAlign: "right" }}>Saldo</td>
-            </tr>
-            <tr>
-              <td>Fecha Operación</td>
-              <td>Clave</td>
-              <td style={{ textAlign: "left" }}>Concepto</td>
-              <td>Fecha Valor</td>
-              <td>Importes</td>
-              <td style={{ textAlign: "right" }}>Saldo</td>
-            </tr>
-            <tr>
-              <td>Fecha Operación</td>
-              <td>Clave</td>
-              <td style={{ textAlign: "left" }}>Concepto</td>
-              <td>Fecha Valor</td>
-              <td>Importes</td>
-              <td style={{ textAlign: "right" }}>Saldo</td>
-            </tr>
-          </tbody>
-        </table>
+        
       </section>
 
       {isSidebarOpen && <SideBarAux closeSidebar={closeSidebar} />}

@@ -306,35 +306,35 @@ span.fecha {
   height: 24px;
   line-height: 24px;
 }
-table {
-  width: 90%;
+table.especial {
+  width: 75%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin: 20px;
 }
 
-th,
-td {
+th.especial,
+td.especial {
   border: none;
   padding: 8px;
   text-align: left;
 }
 
-th {
+th.especial {
   background-color: #004481; /* Azul oscuro */
   color: #fff; /* Font blanco */
   text-align: center;
   padding: 10px;
 }
 
-tr:nth-child(odd) {
+tr.especial:nth-child(odd) {
   background-color: #fff; /* Fila blanca */
 }
 
-tr:nth-child(even) {
+tr.especial:nth-child(even) {
   background-color: #d6eaf8; /* Fila azul claro */
 }
 
-td {
+td.especial {
   color: #004481; /* Font azul oscuro */
   font-size: 18px;
   font-weight: 400;
