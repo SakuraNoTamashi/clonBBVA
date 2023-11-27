@@ -3,6 +3,7 @@ import { bbvaLogo } from "../assets";
 import { FaRegStar } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { CiMenuKebab } from "react-icons/ci";
+import { IoMdMore } from "react-icons/io";
 const AccountsPerBank = () => {
   const [Active, setActive] = useState(false);
 
@@ -67,7 +68,7 @@ const AccountsPerBank = () => {
 
                 <td>
                   <div className="flex  justify-center items-center  cursor-pointer">
-                    <CiMenuKebab color="#1973B8" size={ 30} />
+                    <IoMdMore color="#1973B8" size={30} />
                   </div>
                 </td>
               </tr>
