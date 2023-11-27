@@ -291,6 +291,26 @@ const ChatIcon = () => {
     </svg>
   );
 };
+const LogoutIcon = () => {
+  return (
+    <svg
+      fill="white"
+      viewBox="0 0 260 260"
+      preserveAspectRatio="xMidYMid meet"
+      focusable="false"
+      aria-hidden="true"
+      style={{
+        pointerEvents: "none",
+        display: "block",
+        width: "100%",
+        height: "100%",
+        overflow: "hidden",
+      }}
+    >
+      <path d="M130 10a120 120 0 1 0 120 120A120 120 0 0 0 130 10ZM49.9 129.4 112 67.3l14.3 14.4L88.2 120H210l-20 19.7-101.6-.3 37.5 37.4-14.3 14.3Z"></path>
+    </svg>
+  );
+};
 export {
   ChatIcon,
   UmbrellaIcon,
@@ -306,4 +326,5 @@ export {
   GlobalPositionIcon,
   AccountIcon,
   HomeIcon,
+  LogoutIcon,
 };

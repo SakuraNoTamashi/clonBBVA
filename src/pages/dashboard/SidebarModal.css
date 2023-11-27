@@ -210,6 +210,20 @@
   overflow-y: scroll;
   height: 100%;
 }
+.scroller::-webkit-scrollbar {
+  width: 6px; /* Ancho de la barra de desplazamiento */
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background-color: #666666; /* Color de la barra de desplazamiento */
+  border-radius: 6px; /* Bordes redondeados de la barra de desplazamiento */
+}
+
+.scroller::-webkit-scrollbar-track {
+  background-color: #ffffff; /* Fondo del área de la barra de desplazamiento */
+  border-radius: 10px; /* Bordes redondeados del área de la barra de desplazamiento */
+}
+
 .footer {
   padding-bottom: calc(
     ((3 * var(--gridSpacerVariant, var(--gridSpacer, 8))) / 16) * 1rem
