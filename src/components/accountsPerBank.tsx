@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const AccountsPerBank = () => {
   const [Active, setActive] = useState(false);
-  setActive(false)
+
   const navigate = useNavigate();
   const handleSpanClick = () => {
     navigate("/portal/details");

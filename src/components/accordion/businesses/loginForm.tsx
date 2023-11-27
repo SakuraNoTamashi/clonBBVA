@@ -4,7 +4,7 @@ import SquareCheckbox from "./SquareCheckBox";
 const BusinessLoginForm = () => {
     const navigate = useNavigate();
     const handleSubmitClick = () => {
-        navigate("/portal/")
+        navigate("/portal")
      }
   const handleCheckboxChange = () => {};
   return (
