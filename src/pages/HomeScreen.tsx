@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { homeImage, logo } from "../assets";
 import { styles } from "../styles";
-import { useNavigate } from "react-router-dom";
+
 import HomeAccordion from "../components/accordion/Accordion";
 
 const HomePage = () => {
