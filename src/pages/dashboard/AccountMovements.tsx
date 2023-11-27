@@ -5,6 +5,7 @@ import { BsFileBarGraphFill } from "react-icons/bs";
 import { TbFileCertificate, TbReportSearch } from "react-icons/tb";
 import { IoIosMore } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
+import { SideBarAux } from "../../components/SideBarAux";
 const AccountMovementsPage = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const openSidebar = () => {
@@ -80,10 +81,9 @@ const AccountMovementsPage = () => {
               <p>Exportar</p>
             </div>
           </div>
-              </div>
-              
-              
+        </div>
       </section>
+      {isSidebarOpen && <SideBarAux closeSidebar={closeSidebar} />}
     </>
   );
 };
