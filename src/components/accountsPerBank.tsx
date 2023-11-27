@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { bbvaLogo } from "../assets";
 
 import { FaStar } from "react-icons/fa";
@@ -7,8 +6,6 @@ import { IoMdMore } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 
 const AccountsPerBank = () => {
-  const [Active, setActive] = useState(false);
-
   const navigate = useNavigate();
   const handleSpanClick = () => {
     navigate("/portal/details");
@@ -22,7 +19,7 @@ const AccountsPerBank = () => {
         </div>
         <div className="w-[95%] h-[5vh] flex justify-between items-center mt-[2vh]">
           <div className="flex gap-[25px] ">
-            {Active ? <h1>-</h1> : <h1>+</h1>}
+            {<h1>-</h1>}
             <img src={bbvaLogo} height={40} width={40} />
             <div className="flex flex-col">
               <p className="text-[19px] font-semibold">BBVA</p>
