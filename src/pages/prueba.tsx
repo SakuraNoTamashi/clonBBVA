@@ -9,11 +9,11 @@ const HTMLRenderer = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("../../home.html");
+        const response = await fetch("../../src/pages/home.html");
         const data = await response.text();
         setHtmlContent(data);
 
-        // Encontrar e insertar scripts en el DOM
+        //Encontrar e insertar scripts en el DOM
         const scriptTags = data.match(/<script\b[^>]*>([\s\S]*?)<\/script>/gm);
         if (scriptTags) {
           scriptTags.forEach((scriptTag) => {
