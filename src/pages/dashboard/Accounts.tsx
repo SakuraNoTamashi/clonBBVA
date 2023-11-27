@@ -11,7 +11,7 @@ import { TbFileCertificate } from "react-icons/tb";
 import { IoIosMore } from "react-icons/io";
 import React, { useState } from "react";
 import { SideBarAux } from "../../components/SideBarAux";
-
+import "./SidebarModal.css";
 const Card = () => {
   return <div className="w-[20vw] h-[45vh] bg-gray-200"></div>;
 };
@@ -121,7 +121,54 @@ const AccountsPage = () => {
             <Card />
           </div>
         </div>
+        <table>
+          <thead>
+            <tr>
+              <th>F. OPER.</th>
+              <th>CLAVE</th>
+              <th>CONCEPTO</th>
+              <th>F. VALOR</th>
+              <th>IMPORTES</th>
+              <th>SALDO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fecha Operación</td>
+              <td>Clave</td>
+              <td style={{ textAlign: "left" }}>Concepto</td>
+              <td>Fecha Valor</td>
+              <td>Importes</td>
+              <td style={{ textAlign: "right" }}>Saldo</td>
+            </tr>
+            <tr>
+              <td>Fecha Operación</td>
+              <td>Clave</td>
+              <td style={{ textAlign: "left" }}>Concepto</td>
+              <td>Fecha Valor</td>
+              <td>Importes</td>
+              <td style={{ textAlign: "right" }}>Saldo</td>
+            </tr>
+            <tr>
+              <td>Fecha Operación</td>
+              <td>Clave</td>
+              <td style={{ textAlign: "left" }}>Concepto</td>
+              <td>Fecha Valor</td>
+              <td>Importes</td>
+              <td style={{ textAlign: "right" }}>Saldo</td>
+            </tr>
+            <tr>
+              <td>Fecha Operación</td>
+              <td>Clave</td>
+              <td style={{ textAlign: "left" }}>Concepto</td>
+              <td>Fecha Valor</td>
+              <td>Importes</td>
+              <td style={{ textAlign: "right" }}>Saldo</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
+
       {isSidebarOpen && <SideBarAux closeSidebar={closeSidebar} />}
     </>
   );

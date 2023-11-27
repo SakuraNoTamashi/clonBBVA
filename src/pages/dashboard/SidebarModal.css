@@ -306,3 +306,37 @@ span.fecha {
   height: 24px;
   line-height: 24px;
 }
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: none;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #004481; /* Azul oscuro */
+  color: #fff; /* Font blanco */
+  text-align: center;
+  padding: 10px;
+}
+
+tr:nth-child(odd) {
+  background-color: #fff; /* Fila blanca */
+}
+
+tr:nth-child(even) {
+  background-color: #d6eaf8; /* Fila azul claro */
+}
+
+td {
+  color: #004481; /* Font azul oscuro */
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}

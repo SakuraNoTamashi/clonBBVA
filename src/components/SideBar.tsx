@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./custom.css";
 import { logo } from "../assets";
 import {
@@ -18,12 +18,13 @@ import {
   UmbrellaIcon,
   WalletIcon,
 } from "../assets/icons";
-
+import { useNavigate } from "react-router-dom";
 interface AppBarOptionProps {
   icon: () => JSX.Element;
   label: string;
   onClick: React.MouseEventHandler<HTMLDivElement>;
   logout: boolean;
+  route: string;
 }
 
 const AppBarOption: React.FC<AppBarOptionProps> = ({
@@ -31,13 +32,21 @@ const AppBarOption: React.FC<AppBarOptionProps> = ({
   label,
   onClick,
   logout,
+  route,
 }) => {
   const [hovered, setHovered] = useState(false);
   const [Active, setActive] = useState(false);
+  const navigate = useNavigate();
+
   const handleClick = () => {
     onClick;
+    navigate(route);
     setActive(!Active);
   };
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    setActive(currentPath == route);
+  }, []);
 
   return (
     <div
@@ -49,6 +58,7 @@ const AppBarOption: React.FC<AppBarOptionProps> = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={handleClick}
+      style={{ cursor: "pointer" }}
     >
       <div className="w-[25px] h-[25px] ml-[20px]">{icon()}</div>
       <p
@@ -62,27 +72,27 @@ const AppBarOption: React.FC<AppBarOptionProps> = ({
   );
 };
 const SideBar = () => {
-  type ButtonTuple = [() => JSX.Element, string];
+  type ButtonTuple = [() => JSX.Element, string, string];
   const buttons: ButtonTuple[] = [
-    [HomeIcon, "Inicio"],
-    [AccountIcon, "Cuentas"],
-    [GlobalPositionIcon, "Posición Global"],
-    [PaymentsIcon, "Pagos"],
-    [CollectionsIcon, "Cobros"],
-    [FundingIcon, "Financiación"],
-    [TPVsIcon, "TPVs"],
-    [GuaranteesIcon, "Avales"],
-    [InternationComerceIcon, "Comercio internacional"],
-    [InvestmentIcon, "Iversiones y Mercados"],
-    [SustainableActionIcon, "Herramientas de Acción Sostenible"],
+    [HomeIcon, "Inicio", "/portal"],
+    [AccountIcon, "Cuentas", "/portal/accounts"],
+    [GlobalPositionIcon, "Posición Global", "/portal2"],
+    [PaymentsIcon, "Pagos", "/portal2"],
+    [CollectionsIcon, "Cobros", "/portal2"],
+    [FundingIcon, "Financiación", "/portal2"],
+    [TPVsIcon, "TPVs", "/portal2"],
+    [GuaranteesIcon, "Avales", "/portal2"],
+    [InternationComerceIcon, "Comercio internacional", "/portal2"],
+    [InvestmentIcon, "Iversiones y Mercados", "/portal2"],
+    [SustainableActionIcon, "Herramientas de Acción Sostenible", "/portal2"],
   ];
 
   const buttons2: ButtonTuple[] = [
-    [WalletIcon, "Tarjetas"],
-    [UmbrellaIcon, "Seguros"],
+    [WalletIcon, "Tarjetas", "/portal2"],
+    [UmbrellaIcon, "Seguros", "/portal2"],
   ];
 
-  const button3: ButtonTuple = [ChatIcon, "Danos tu opinión"];
+  const button3: ButtonTuple = [ChatIcon, "Danos tu opinión", "/portal2"];
   return (
     <section className="z-99 w-[13vw] h-screen bg-navyBlue fixed left-0 flex flex-col items-start ">
       <img src={logo} />
@@ -95,6 +105,7 @@ const SideBar = () => {
               label={`${button[1]}`}
               onClick={() => {}}
               logout={false}
+              route={`${button[2]}`}
             />
           ))}
           <div className="w-[90%] border-b-[2px] border-white"></div>
@@ -108,6 +119,7 @@ const SideBar = () => {
               label={`${button[1]}`}
               onClick={() => {}}
               logout={false}
+              route={`${button[2]}`}
             />
           ))}
           <div className="w-[90%] border-b-[2px] border-white"></div>
@@ -118,6 +130,7 @@ const SideBar = () => {
           label={`${button3[1]}`}
           onClick={() => {}}
           logout={false}
+          route={`${button3[2]}`}
         />
       </div>
 
@@ -127,6 +140,7 @@ const SideBar = () => {
         label={`Salir`}
         onClick={() => {}}
         logout={true}
+        route={`/portal`}
       />
     </section>
   );
