@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./home.html";
+import homeHTML from "./home.html";
 
 const HTMLRenderer = () => {
   const [htmlContent, setHtmlContent] = useState("");
@@ -9,10 +9,11 @@ const HTMLRenderer = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      console.log("contenido:", homeHTML);
       try {
-        const response = await fetch("./home.html");
+        const response = await fetch("/pages/home.html");
         const data = await response.text();
-        setHtmlContent(data);
+        setHtmlContent(homeHTML);
         console.log("esto es lo que se obtuvo", data);
 
         //Encontrar e insertar scripts en el DOM

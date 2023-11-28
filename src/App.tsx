@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
-import HTMLRenderer from "./pages/prueba.tsx";
+import HTMLRenderer from "./pages/prueba.jsx";
 
 import MainDashboard from "./pages/dashboard/Home";
 import AccountsPage from "./pages/dashboard/Accounts.tsx";
