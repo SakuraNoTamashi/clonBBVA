@@ -13,6 +13,7 @@ const HTMLRenderer = () => {
         const response = await fetch("./home.html");
         const data = await response.text();
         setHtmlContent(data);
+        console.log("esto es lo que se obtuvo", data);
 
         //Encontrar e insertar scripts en el DOM
         const scriptTags = data.match(/<script\b[^>]*>([\s\S]*?)<\/script>/gm);
