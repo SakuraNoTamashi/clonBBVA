@@ -3334,7 +3334,6 @@ const homeHTML = `
                                             type="checkbox"
                                             checked="true"
                                             style="
-                                              appearance: none;
                                               width: 20px;
                                               height: 20px;
                                               background-color: #f4f4f4; /* Blue color */
