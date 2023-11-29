@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 import "./SidebarModal.css";
@@ -40,41 +39,41 @@ const MainDashboard = () => {
       <DashboardAppBar handle={openSidebar} />
       <section className=" w-[86vw] h-[120vh] absolute right-0 top-[15vh] flex flex-col z-1   items-center ">
         <div className="flex  w-[90%] h-[30vh]  justify-around ">
-          <div className="bg-white p-6 rounded-sm shadow-lg w-[45%] h-[25vh] overflow-hidden">
+          <div className="bg-white p-6 rounded-sm shadow-lg w-[45%] 2xl:h-[25vh] h-[27vh] overflow-hidden">
             <h1 className="font-benton-sans font-sans  font-semibold  text-base text-gray-800">
               ACCIONES RAPIDAS
             </h1>
-            <div className="flex w-[90%] h-[70%] ml-[5%] items-center justify-evenly mt-[2%]">
-              <div className="w-[150px] items-center flex flex-col">
-                <img src={transaction} />
+            <div className="flex w-[90%] h-[70%] ml-[5%] items-center gap-5 justify-evenly mt-[3%]">
+              <div className="2xl:w-[150px] h-[100px]  items-center flex flex-col">
+                <img className="h-[50px]" src={transaction} />
                 <a className="text-center text-infoBlue font-semibold  text-[12px]">
                   Realizar transferencia individual
                 </a>
               </div>
 
               <div className="w-[150px] items-center flex flex-col">
-                <img src={historico} />
+                <img className="h-[50px]" src={historico} />
                 <a className="text-center text-infoBlue font-semibold  text-[12px]">
                   Realizar transferencia individual
                 </a>
               </div>
 
               <div className="w-[150px] items-center flex flex-col">
-                <img src={docs} />
+                <img className="h-[50px]" src={docs} />
                 <a className="text-center text-infoBlue font-semibold  text-[12px]">
                   Realizar transferencia individual
                 </a>
               </div>
 
               <div className="w-[150px] items-center flex flex-col">
-                <img src={docs} />
+                <img className="h-[50px]" src={docs} />
                 <a className="text-center text-infoBlue font-semibold  text-[12px]">
                   Correspondencia virtual
                 </a>
               </div>
             </div>
           </div>
-          <div className="bg-white p-6 rounded-sm shadow-lg w-[45%] h-[25vh]">
+          <div className="bg-white p-6 rounded-sm shadow-lg w-[45%] 2xl:h-[25vh] h-[27vh]">
             <h1 className="font-benton-sans font-sans  font-semibold  text-base text-gray-800">
               FIRMAS PENDIENTES
             </h1>
@@ -117,34 +116,34 @@ const MainDashboard = () => {
         <AccountsPerBank />
 
         <div className="flex w-[85%] h-[12vh] items-center bg-white p-10 border  rounded-sm shadow-xl  gap-[30px] ">
-          <div className="flex gap-[15px]">
+          <div className="flex 2xl:gap-[15px]">
             <img src={sabadell} width={45} />
             <img src={santander} width={45} />
             <img src={bankia} width={45} />
             <img src={lacaixa} width={45} />
             <img src={andMore} width={45} />
           </div>
-          <div className="border-l-[3px] border-gray-400 h-[4vh] w-[3px] ml-10"></div>
-          <p className="text-[22px] text-gray-600">
+          <div className="border-l-[3px] border-gray-400 2xl:h-[4vh] h-[6vh] w-[3px] 2xl:ml-10 ml-[10%]"></div>
+          <p className="2xl:text-[22px] text-[19px] text-gray-600">
             Añade más bancos para tener una visión completa de tu tesorería.
           </p>
-          <button className=" h-[7vh] w-[15%] ml-[10%] text-white font-bold text-[20px] bg-infoBlue">
+          <button className=" h-[7vh] 2xl:w-[15%] w-[25%] ml-[10%] text-white font-bold 2xl:text-[20px] text-[15px] bg-infoBlue">
             Añadir banco
           </button>
         </div>
 
         <div className="w-[85%] mt-[5vh]">
-          <h2 className="text-[35px] text-gray-700 font-light">
+          <h2 className="2xl:text-[35px] text-[25px] text-gray-700 font-light">
             {" "}
             Tu impacto ambiental
           </h2>
         </div>
         <div className="flex w-[85%] h-[14vh] items-center bg-white p-10 border  rounded-sm shadow-xl  justify-evenly">
           <img src={hdcLogo} height={70} />
-          <h2 className="text-[35px] font-bold">
+          <h2 className="2xl:text-[35px] text-[20px] font-bold">
             ¿Sabes cúanto gastas en energía y cúanto podrías ahorrar?
           </h2>
-          <button className="h-[7vh] w-[15%] ml-[0%] text-white font-bold text-[20px] bg-infoBlue">
+          <button className="h-[7vh] w-[15%] 2xl:ml-[0%] ml-[2%] text-white font-bold 2xl:text-[20px] text-[15px] bg-infoBlue">
             Saber más
           </button>
         </div>

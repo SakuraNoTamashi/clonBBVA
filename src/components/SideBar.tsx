@@ -54,13 +54,15 @@ const AppBarOption: React.FC<AppBarOptionProps> = ({
       "border-white"
       ${
         hovered || Active ? "bg-appBarHighlighted " : "bg-navyBlue"
-      }  flex items-center  gap-[15px] `}
+      }  flex items-center  gap-[15px] justify-start`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={handleClick}
       style={{ cursor: "pointer" }}
     >
-      <div className="w-[25px] h-[25px] ml-[20px]">{icon()}</div>
+      <div className="2xl:w-[25px] 2xl:h-[25px] w-[30px] ml-[20px]">
+        {icon()}
+      </div>
       <p
         className={`font-'Benton Sans', sans-serif  font-bold ${
           false ? "text-indicativeYellow" : "text-white"
@@ -94,10 +96,10 @@ const SideBar = () => {
 
   const button3: ButtonTuple = [ChatIcon, "Danos tu opinión", "/portal2"];
   return (
-    <section className="z-99 w-[13vw] h-screen bg-navyBlue fixed left-0 flex flex-col items-start ">
+    <section className="z-99 w-[13vw] h-screen bg-navyBlue fixed left-0 flex flex-col items-start  ">
       <img src={logo} />
       <div className="flex flex-col  h-[90%] items-start overflow-y-scroll customScroll">
-        <div className="flex flex-col items-center w-full gap-[10px]  pt-[20px] ">
+        <div className="flex flex-col items-center 2xl:w-full w-[90%] gap-[10px]  pt-[20px] ">
           {buttons.map((button, index) => (
             <AppBarOption
               key={`appbar-button-${index}`}
@@ -111,7 +113,7 @@ const SideBar = () => {
           <div className="w-[90%] border-b-[2px] border-white"></div>
         </div>
 
-        <div className="flex flex-col items-center w-full gap-[10px] ">
+        <div className="flex flex-col items-center 2xl:w-full sm:w-[90]gap-[10px] ">
           {buttons2.map((button, index) => (
             <AppBarOption
               key={`appbar-button-${index}`}
@@ -124,14 +126,16 @@ const SideBar = () => {
           ))}
           <div className="w-[90%] border-b-[2px] border-white"></div>
         </div>
-        <AppBarOption
-          key={`appbar-button-Opinion`}
-          icon={button3[0]}
-          label={`${button3[1]}`}
-          onClick={() => {}}
-          logout={false}
-          route={`${button3[2]}`}
-        />
+        <div className="2xl:w-full w-[90%]">
+          <AppBarOption
+            key={`appbar-button-Opinion`}
+            icon={button3[0]}
+            label={`${button3[1]}`}
+            onClick={() => {}}
+            logout={false}
+            route={`${button3[2]}`}
+          />
+        </div>
       </div>
 
       <AppBarOption

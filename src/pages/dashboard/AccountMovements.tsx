@@ -114,10 +114,10 @@ const AccountMovementsPage = () => {
             Posición de cuentas
           </h1>
         </div>
-        <div className="flex  w-[85%] h-[30vh]  justify-around border border-gray-100">
+        <div className="flex  w-[85%] 2xl:h-[30vh]  justify-around border border-gray-100">
           <div className="bg-white p-6 rounded-sm shadow-lg w-full h-full flex flex-col font-sans gap-[50px]">
             <div className="w-full flex justify-between">
-              <div className="w-[45%] h-[7vh] bg-gray-200 border border-gray-300 flex items-center gap-5">
+              <div className="2xl:w-[45%] 2xl:h-[7vh] bg-gray-200 border border-gray-300 flex items-center gap-5">
                 <img
                   src={bbvaLogo}
                   width={50}

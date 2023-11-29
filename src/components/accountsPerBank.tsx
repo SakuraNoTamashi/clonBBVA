@@ -34,10 +34,12 @@ const AccountsPerBank = () => {
         <div className=" w-[96%] ml-[4vw] mt-5">
           <table className="table-auto">
             <thead className="border-b px-4 py-2 text-gray-500  font-sans text-left">
-              <th className=" font-medium ">FAV.</th>
-              <th className="w-[65%] font-medium ">ALIAS/NÚMERO DE CUENTA</th>
-              <th className="w-[10%] font-medium ">SALDO DISPONIBLE</th>
-              <th className="font-medium text-end">SALDO EN CUENTA</th>
+              <th className=" font-medium w-[10%]">FAV</th>
+              <th className="w-[50%] font-medium ">ALIAS/NÚMERO DE CUENTA</th>
+              <th className="w-[20%] font-medium ">SALDO DISPONIBLE</th>
+              <th className="font-medium w-[20%] text-end ">
+                SALDO EN CUENTA
+              </th>
               <th></th>
             </thead>
             <tbody className="border-b border-gray-200">
@@ -57,7 +59,7 @@ const AccountsPerBank = () => {
                 </td>
                 <td>
                   <div className="flex flex-col justify-center items-end">
-                    <p className="flex text-[25px] text-gray-600 items-center gap-2">
+                    <p className="flex 2xl:text-[25px] text-[20px] text-gray-600 items-center gap-2">
                       45.522,12 <p className="text-[15px]">EUR</p>
                     </p>
                     <p className="text-gray-400 text-[16px]">Hace 2 minutos</p>
@@ -66,7 +68,7 @@ const AccountsPerBank = () => {
 
                 <td>
                   <div className="flex flex-col justify-center items-end">
-                    <p className="flex text-[25px] text-gray-600 items-center gap-2">
+                    <p className="flex 2xl:text-[25px] text-[20px] text-gray-600 items-center gap-2">
                       50.504,26 <p className="text-[15px]">EUR</p>
                     </p>
                     <p className="text-gray-400 text-[16px]">Hace 2 minutos</p>
